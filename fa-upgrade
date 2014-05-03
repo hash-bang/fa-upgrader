@@ -3,15 +3,20 @@
 # Usage: fa-upgrade <files...>
 
 perl -pi \
+-e 's/icon-2x/fa-2x/g;' \
+-e 's/icon-3x/fa-3x/g;' \
+-e 's/icon-4x/fa-4x/g;' \
+-e 's/icon-5x/fa-5x/g;' \
 -e 's/icon-android/fa fa-android/g;' \
 -e 's/icon-asterisk/fa fa-asterisk/g;' \
+-e 's/icon-ban-circle/fa fa-ban/g;' \
 -e 's/icon-bar-chart/fa fa-bar-chart-o/g;' \
 -e 's/icon-beaker/fa fa-flask/g;' \
 -e 's/icon-bug/fa fa-bug/g;' \
--e 's/icon-chevron-down/fa fa-icon-chevron-down/g;' \
--e 's/icon-chevron-left/fa fa-icon-chevron-left/g;' \
--e 's/icon-chevron-right/fa fa-icon-chevron-right/g;' \
--e 's/icon-chevron-up/fa fa-icon-chevron-up/g;' \
+-e 's/icon-chevron-down/fa fa-chevron-down/g;' \
+-e 's/icon-chevron-left/fa fa-chevron-left/g;' \
+-e 's/icon-chevron-right/fa fa-chevron-right/g;' \
+-e 's/icon-chevron-up/fa fa-chevron-up/g;' \
 -e 's/icon-circle-arrow-down/fa fa-arrow-circle-down/g;' \
 -e 's/icon-circle-arrow-left/fa fa-arrow-circle-left/g;' \
 -e 's/icon-circle-arrow-right/fa fa-arrow-circle-right/g;' \
@@ -44,6 +49,11 @@ perl -pi \
 -e 's/icon-lemon/fa fa-lemon-o/g;' \
 -e 's/icon-lock/fa fa-lock/g;' \
 -e 's/icon-minus/fa fa-minus/g;' \
+-e 's/icon-off/fa fa-power-off/g;' \
+-e 's/icon-ok/fa fa-check/g;' \
+-e 's/icon-ok-sign/fa fa-check-circle/g;' \
+-e 's/icon-pencil/fa fa-pencil/g;' \
+-e 's/icon-play/fa fa-play/g;' \
 -e 's/icon-plus/fa fa-plus/g;' \
 -e 's/icon-question-sign/fa fa-question-circle/g;' \
 -e 's/icon-random/fa fa-random/g;' \
@@ -60,6 +70,7 @@ perl -pi \
 -e 's/icon-signout/fa fa-sign-out/g;' \
 -e 's/icon-spin/fa-spin/g;' \
 -e 's/icon-spinner/fa fa-spinner/g;' \
+-e 's/icon-stack/fa-stack/g;' \
 -e 's/icon-star-empty/ffa a-star-o/g;' \
 -e 's/icon-star/fa fa-star/g;' \
 -e 's/icon-thumbs-down/fa fa-thumbs-o-down/g;' \
