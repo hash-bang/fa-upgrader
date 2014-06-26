@@ -1,18 +1,40 @@
 #!/bin/bash
-# Single use script which will upgrade all Font-awesome icons in a project to their new equivelents
+# Single use script which will upgrade all Font-awesome icons in a project to their new equivalents
 # Usage: fa-upgrade <files...>
 
+# Higher priority replacements (need to be applied in order usually because a later replacement can interfere)
+perl -pi \
+-e 's/icon-check-empty/fa fa-square-o/g;' \
+-e 's/icon-check/fa fa-check-square-o/g;' \
+-e 's/icon-bell-alt/fa fa-bell-o/g;' \
+-e 's/icon-bell/fa fa-bell/g;' \
+"$@"
+
+# Lower priority replacements (sorted A-Z)
 perl -pi \
 -e 's/icon-2x/fa-2x/g;' \
 -e 's/icon-3x/fa-3x/g;' \
 -e 's/icon-4x/fa-4x/g;' \
 -e 's/icon-5x/fa-5x/g;' \
 -e 's/icon-android/fa fa-android/g;' \
+-e 's/icon-angle-down/fa fa-angle-down/g;' \
+-e 's/icon-angle-left/fa fa-angle-left/g;' \
+-e 's/icon-angle-right/fa fa-angle-right/g;' \
+-e 's/icon-angle-up/fa fa-angle-up/g;' \
+-e 's/icon-arrow-down/fa fa-arrow-down/g;' \
+-e 's/icon-arrow-left/fa fa-arrow-left/g;' \
+-e 's/icon-arrow-right/fa fa-arrow-right/g;' \
+-e 's/icon-arrow-up/fa fa-arrow-up/g;' \
 -e 's/icon-asterisk/fa fa-asterisk/g;' \
 -e 's/icon-ban-circle/fa fa-ban/g;' \
 -e 's/icon-bar-chart/fa fa-bar-chart-o/g;' \
 -e 's/icon-beaker/fa fa-flask/g;' \
+-e 's/icon-book/fa fa-book/g;' \
 -e 's/icon-bug/fa fa-bug/g;' \
+-e 's/icon-caret-down/fa fa-caret-down/g;' \
+-e 's/icon-caret-left/fa fa-caret-left/g;' \
+-e 's/icon-caret-right/fa fa-caret-right/g;' \
+-e 's/icon-caret-up/fa fa-caret-up/g;' \
 -e 's/icon-chevron-down/fa fa-chevron-down/g;' \
 -e 's/icon-chevron-left/fa fa-chevron-left/g;' \
 -e 's/icon-chevron-right/fa fa-chevron-right/g;' \
@@ -23,11 +45,20 @@ perl -pi \
 -e 's/icon-circle-arrow-up/fa fa-arrow-circle-up/g;' \
 -e 's/icon-circle-blank/fa fa-circle-o/g;' \
 -e 's/icon-circle/fa fa-circle/g;' \
+-e 's/icon-cloud-download/fa fa-cloud-download/g;' \
+-e 's/icon-cloud-upload/fa fa-cloud-upload/g;' \
+-e 's/icon-coffee/fa fa-coffee/g;' \
 -e 's/icon-cog/fa fa-cog/g;' \
 -e 's/icon-comment/fa fa-comment/g;' \
 -e 's/icon-comments/fa fa-comments/g;' \
 -e 's/icon-copy/fa fa-copy/g;' \
 -e 's/icon-cross/fa fa-times/g;' \
+-e 's/icon-dashboard/fa fa-dashboard/g;' \
+-e 's/icon-double-angle-down/fa fa-angle-double-down/g;' \
+-e 's/icon-double-angle-left/fa fa-angle-double-left/g;' \
+-e 's/icon-double-angle-right/fa fa-angle-double-right/g;' \
+-e 's/icon-double-angle-up/fa fa-angle-double-up/g;' \
+-e 's/icon-download/fa fa-download/g;' \
 -e 's/icon-envelope/fa fa-envelope/g;' \
 -e 's/icon-eraser/fa fa-eraser/g;' \
 -e 's/icon-eraser/fa fa-eraser/g;' \
@@ -46,7 +77,10 @@ perl -pi \
 -e 's/icon-hand-up/fa fa-hand-o-up/g;' \
 -e 's/icon-home/fa fa-home/g;' \
 -e 's/icon-info-sign/fa fa-info-circle/g;' \
+-e 's/icon-key/fa fa-key/g;' \
+-e 's/icon-leaf/fa fa-leaf/g;' \
 -e 's/icon-lemon/fa fa-lemon-o/g;' \
+-e 's/icon-lightbulb/fa fa-lightbulb-o/g;' \
 -e 's/icon-lock/fa fa-lock/g;' \
 -e 's/icon-minus/fa fa-minus/g;' \
 -e 's/icon-off/fa fa-power-off/g;' \
@@ -66,17 +100,22 @@ perl -pi \
 -e 's/icon-search/fa fa-search/g;' \
 -e 's/icon-share-alt/fa fa-share-square-o/g;' \
 -e 's/icon-share/fa fa-share/g;' \
+-e 's/icon-shopping-cart/fa fa-shopping-cart/g;' \
 -e 's/icon-signin/fa fa-sign-in/g;' \
 -e 's/icon-signout/fa fa-sign-out/g;' \
+-e 's/icon-smile/fa-smile/g;' \
 -e 's/icon-spin/fa-spin/g;' \
 -e 's/icon-spinner/fa fa-spinner/g;' \
 -e 's/icon-stack/fa-stack/g;' \
 -e 's/icon-star-empty/ffa a-star-o/g;' \
 -e 's/icon-star/fa fa-star/g;' \
+-e 's/icon-tag/fa fa-tag/g;' \
+-e 's/icon-tags/fa fa-tags/g;' \
 -e 's/icon-thumbs-down/fa fa-thumbs-o-down/g;' \
 -e 's/icon-thumbs-up/fa fa-thumbs-o-up/g;' \
 -e 's/icon-time/fa fa-clock-o/g;' \
 -e 's/icon-trash/fa fa-trash-o/g;' \
 -e 's/icon-user/fa fa-user/g;' \
 -e 's/icon-warning-sign/fa fa-warning/g;' \
+-e 's/icon-wrench/fa fa-wrench/g;' \
 "$@"
